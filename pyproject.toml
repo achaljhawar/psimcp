@@ -1,0 +1,20 @@
+[project]
+name = "psim-mcp"
+version = "0.1.0"
+description = "MCP server for Altair PSIM 2026: simulate power-electronics schematics, sweep parameters, analyze waveforms"
+readme = "README.md"
+authors = [
+    { name = "Achal Jhawar", email = "achaldps@gmail.com" }
+]
+requires-python = ">=3.11"
+dependencies = [
+    "mcp>=2.2,<3",
+    "numpy>=2.0",
+]
+
+[project.scripts]
+psim-mcp = "psim_mcp.server:main"
+
+[build-system]
+requires = ["uv_build>=0.8.14,<0.9.0"]
+build-backend = "uv_build"
